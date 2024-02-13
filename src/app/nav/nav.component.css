@@ -1,0 +1,26 @@
+.stickNav {
+  height: 80px;
+  background-color: #1d2027;
+  position: sticky;
+  top: 0;
+  color: #757688;
+  font-size: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-right: 4rem;
+}
+.stickNav a {
+  outline-color: transparent;
+  text-decoration: none;
+  color: #757688;
+}
+.stickNav a:active {
+  color: white;
+}
+
+.stickNav a:hover {
+  color: white;
+}

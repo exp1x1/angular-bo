@@ -1,0 +1,97 @@
+
+
+#contact {
+  background-color: #292c35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+#contact > .title {
+  color: white;
+  font-size: 4rem;
+  padding: 2rem;
+}
+.contactContainer {
+  width: 60%;
+
+  display: flex;
+  flex-direction: row;
+  gap: 12rem;
+}
+
+.contactForm {
+  width: 50%;
+}
+.contactForm label {
+  color: var(--third-color);
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.contactForm input,
+.contactForm textarea {
+  background-color: var(--primary-color);
+  color: var(--third-color);
+
+  border: none;
+  padding: 0.8rem;
+}
+
+*::placeholder {
+  color: var(--third-color);
+}
+
+textarea:active {
+  background-color: var(--primary-color);
+  color: var(--third-color);
+}
+
+.contactButton {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contactButton button {
+  color: white;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  font-size: 1.3rem;
+  border: none;
+  width: 180px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: 50%;
+  height: 100%;
+}
+
+.contactDetails .title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.contactDetails p {
+  color: var(--third-color);
+  margin: 0;
+  font-size: 1.3rem;
+}
+.contactDetails a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+}
+
+.contactDetails .num {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.contactDetails a:hover {
+  color: white;
+}

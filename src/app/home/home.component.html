@@ -1,0 +1,179 @@
+<main class="" id="home">
+  <nav id="mainNav">
+    <div>
+      <img
+        class="logoCon"
+        src="../../assets/img/apple-logo-1024x728.png"
+        alt="logo"
+      />
+    </div>
+
+    <div class="cartDisplay" (click)="onCartClick()">
+      <p>Cart</p>
+      <p class="cartNum">{{ cart.length }}</p>
+    </div>
+  </nav>
+
+  <div id="carousel">
+    <!-- section 1 -->
+    <div class="sec1">
+      <div class="productTitle">
+        <p>{{ slides[currentIndex].brand }}</p>
+        <p>{{ slides[currentIndex].title }}</p>
+      </div>
+      <div class="pricesTitle">
+        <p class="check">$ {{ slides[currentIndex].price }},-</p>
+        <p>
+          $
+          {{ slides[currentIndex].price - 100 }},-
+        </p>
+      </div>
+      <div class="cartButton" *ngIf="isAdded()">
+        <div class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="svg"
+            id="svgIcon"
+          >
+            <!-- Border Circle -->
+            <circle
+              cx="12"
+              cy="12"
+              r="11"
+              fill="none"
+              stroke="#6971fa"
+              stroke-width="1.5"
+            ></circle>
+
+            <!-- Replace "+" with "✓" -->
+            <text x="7" y="18" font-size="14" fill="white">&#10003;</text>
+          </svg>
+        </div>
+        <p>ADDED TO CART</p>
+      </div>
+      <div class="cartButton" *ngIf="!isAdded()" (click)="addItem()">
+        <div class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="svg"
+            id="svgIcon"
+          >
+            <!-- Border Circle -->
+            <circle
+              cx="12"
+              cy="12"
+              r="11"
+              fill="none"
+              stroke="#6971fa"
+              stroke-width="1.5"
+            ></circle>
+
+            <!-- Horizontal Line -->
+            <line
+              x1="8"
+              y1="12"
+              x2="16"
+              y2="12"
+              stroke="#fff"
+              stroke-width="1"
+            ></line>
+            <!-- Vertical Line -->
+            <line
+              x1="12"
+              y1="8"
+              x2="12"
+              y2="16"
+              stroke="#fff"
+              stroke-width="1"
+            ></line>
+          </svg>
+        </div>
+        <p>ADD TO CART</p>
+      </div>
+    </div>
+
+    <!-- section 2 -->
+    <div
+      class="sec2 productImg"
+      [style.background-image]="'url(' + slides[currentIndex].thumbnail + ')'"
+    ></div>
+
+    <!-- section 3 -->
+    <div class="sec3">
+      <div class="carouselButton">
+        <div (click)="next()">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <g id="SVGRepo_iconCarrier">
+              <defs>
+                <style>
+                  .d {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                  }
+                </style>
+              </defs>
+              <g id="a" />
+              <g id="b">
+                <g>
+                  <line class="d" x1="15.38" x2="8.62" y1="12" y2="5.5" />
+                  <line class="d" x1="15.38" x2="8.62" y1="12" y2="18.5" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <div (click)="prev()">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+            transform="matrix(-1, 0, 0, 1, 0, 0)"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <g id="SVGRepo_iconCarrier">
+              <defs>
+                <style>
+                  .c {
+                    fill: none;
+                    stroke: #727692;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                  }
+                </style>
+              </defs>
+              <g id="a" />
+              <g id="b">
+                <g class="i">
+                  <line class="c" x1="15.38" x2="8.62" y1="12" y2="5.5" />
+                  <line class="c" x1="15.38" x2="8.62" y1="12" y2="18.5" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

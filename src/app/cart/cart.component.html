@@ -1,0 +1,25 @@
+<div id="cart">
+  <div class="emptyCart" *ngIf="cartEmpty()">
+    <p>Cart Is Empty</p>
+    <button (click)="onBackClick()" class="backButton">Go Back</button>
+  </div>
+
+  <div class="mainCart" *ngIf="!cartEmpty()">
+    <div class="title">
+      <p>Items</p>
+      <p>Price</p>
+    </div>
+
+    <hr />
+    <div class="cartDisplay pt-3">
+      <div class="cartItems" *ngFor="let item of cart; let i = index">
+        <p>{{ item.title }}</p>
+        <p>$ {{ item.price - 100 }}</p>
+      </div>
+    </div>
+    <div class="cartFoot mt-3">
+      <button (click)="onBackClick()" class="backButton">Go Back</button>
+      <p>Total Price : $ {{ getTotalPrice().price }}</p>
+    </div>
+  </div>
+</div>

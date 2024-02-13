@@ -1,0 +1,75 @@
+<div id="contact">
+  <div class="title">
+    <p>Contact</p>
+  </div>
+  <div class="contactContainer">
+    <form class="contactForm" [formGroup]="contactForm">
+      <div class="mb-3">
+        <label for="FormControlInput1" class="form-label">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="FormControlInput1"
+          formControlName="name"
+          placeholder="Full Name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="FormControlInput2" class="form-label">E-mail</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="mail"
+          id="FormControlInput2"
+          placeholder="Phone Number"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="FormControlInput3" class="form-label">Contact Phone</label>
+        <input
+          type="number"
+          class="form-control"
+          formControlName="phone"
+          id="exampleFormControlInput3"
+          placeholder="Email Address"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="FormControlTextarea1" class="form-label">Comment</label>
+        <textarea
+          class="form-control"
+          formControlName="comment"
+          id="FormControlTextarea1"
+          rows="3"
+          placeholder="Message..."
+        ></textarea>
+      </div>
+
+      <div class="contactButton">
+        <button
+          class="button mt-3"
+          [disabled]="contactForm.invalid"
+          (click)="onSubmit()"
+        >
+          Send
+        </button>
+      </div>
+    </form>
+    <div class="contactDetails">
+      <p class="title">Get in touch</p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        exercitationem amet eum omnis saepe facere sit ratione error voluptas!
+        Laudantium est nisi placeat provident. Nam maiores officia quidem odio
+        reiciendis.
+      </p>
+
+      <a href="mailto:info@blabla.mk">info@blabla.mk</a>
+      <a href="tel:389-3222-111" class="num">(389) 3222-111</a>
+
+      <p>Blvd. Partizanska 62 <br />1000 Skopje, Macedonia</p>
+    </div>
+  </div>
+</div>
+
+
